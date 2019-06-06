@@ -1,4 +1,5 @@
 import { IOdooModel, OdooModel } from "../models/odooModel";
+import { IHttpService } from "../services/http/httpService";
 import { OdooCommonService } from "../services/odooCommonService";
 import { OdooObjectService } from "../services/odooObjectService";
 import { IOdooService, OdooService } from "../services/OdooService";
@@ -15,6 +16,7 @@ export interface IOdooConnection {
   secure: boolean;
   uid?: number;
   baseUrl: string;
+  httpService?: IHttpService;
   // version: () => Promise<any>;
   // authenticate: () => Promise<boolean>;
   // login: () => Promise<boolean>;
@@ -38,6 +40,7 @@ export abstract class OdooConnection implements IOdooConnection {
   public secure: boolean;
   public uid?: number;
   public baseUrl: string;
+  public httpService?: IHttpService;
 
   constructor(
     hostname: string,
@@ -46,7 +49,8 @@ export abstract class OdooConnection implements IOdooConnection {
     username: string,
     password: string,
     protocol: OdooConnectionProtocol,
-    secure: boolean
+    secure: boolean,
+    httpService?: IHttpService
   ) {
     this.hostname = hostname;
     this.port = port;
@@ -56,6 +60,7 @@ export abstract class OdooConnection implements IOdooConnection {
     this.protocol = protocol;
     this.secure = secure;
     this.baseUrl = this.buildBaseUrl();
+    this.httpService = httpService;
   }
 
   public getService(type: OdooServiceType): IOdooService {
