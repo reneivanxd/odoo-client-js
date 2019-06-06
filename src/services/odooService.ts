@@ -1,3 +1,5 @@
+import { IOdooConnection } from "../connections/odooConnection";
+
 export interface IOdooService {
   name: string;
   connection: IOdooConnection;
