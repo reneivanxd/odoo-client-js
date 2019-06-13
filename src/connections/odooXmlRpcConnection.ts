@@ -20,4 +20,8 @@ export class OdooXmlRpcConnection extends OdooConnection {
       secure
     );
   }
+
+  protected buildBody(service: string, method: string, ...args: any[]): string {
+    return "";
+  }
 }

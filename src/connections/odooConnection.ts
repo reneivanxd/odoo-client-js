@@ -27,7 +27,7 @@ export interface IOdooConnection {
   // write: (data: any) => Promise<any>;
   getServiceByName: (name: string) => IOdooService;
   getService: (type: OdooServiceType) => IOdooService;
-  getModel: (name: string) => any;
+  getModel: <TModel>(name: string) => IOdooModel<TModel>;
 }
 
 export abstract class OdooConnection implements IOdooConnection {
@@ -79,7 +79,7 @@ export abstract class OdooConnection implements IOdooConnection {
     return new OdooService(name, this);
   }
 
-  public getModel(name: string): IOdooModel {
+  public getModel<TModel = any>(name: string): IOdooModel<TModel> {
     return new OdooModel(name, new OdooObjectService(this));
   }
 
@@ -88,4 +88,10 @@ export abstract class OdooConnection implements IOdooConnection {
       this.protocol
     }`;
   }
+
+  protected abstract buildBody(
+    service: string,
+    method: string,
+    ...args: any[]
+  ): string;
 }

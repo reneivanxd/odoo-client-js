@@ -20,4 +20,17 @@ export class OdooJsonRpcConnection extends OdooConnection {
       secure
     );
   }
+
+  protected buildBody(service: string, method: string, ...args: any[]): string {
+    return JSON.stringify({
+      id: Date.now(),
+      jsonrpc: "2.0",
+      method: "call",
+      params: {
+        service,
+        method,
+        args
+      }
+    });
+  }
 }

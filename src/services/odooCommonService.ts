@@ -4,7 +4,7 @@ import { IOdooService, OdooService } from "./OdooService";
 export interface IOdooCommonService extends IOdooService {
   version: () => any;
   authenticate: () => boolean;
-  login: () => boolean;
+  login: () => number;
 }
 
 export class OdooCommonService extends OdooService
@@ -21,7 +21,7 @@ export class OdooCommonService extends OdooService
     return false;
   }
 
-  public login(): boolean {
-    return false;
+  public login(): number {
+    return -1;
   }
 }

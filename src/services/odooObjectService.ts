@@ -2,7 +2,7 @@ import { IOdooConnection } from "../connections/odooConnection";
 import { IOdooService, OdooService } from "./OdooService";
 
 export interface IOdooObjectService extends IOdooService {
-  execute_kw: () => void;
+  execute_kw: <T = any>(...args: any[]) => T;
 }
 
 export class OdooObjectService extends OdooService
@@ -11,7 +11,7 @@ export class OdooObjectService extends OdooService
     super("object", connection);
   }
 
-  public execute_kw(): void {
-    return;
+  public execute_kw<T = any>(...args: any[]): T {
+    return {} as T;
   }
 }
