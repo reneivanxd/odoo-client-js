@@ -3,7 +3,7 @@ import { IOdooConnection } from "../connections/odooConnection";
 export interface IOdooService {
   name: string;
   connection: IOdooConnection;
-  call: (method: string) => any;
+  call: <T>(method: string, ...args: any[]) => Promise<T>;
 }
 
 export class OdooService implements IOdooService {
@@ -15,7 +15,7 @@ export class OdooService implements IOdooService {
     this.connection = connection;
   }
 
-  public call(method: string): any {
-    return null;
+  public call<T = any>(method: string, ...args: any[]): Promise<T> {
+    return this.connection.call(this.name, method);
   }
 }

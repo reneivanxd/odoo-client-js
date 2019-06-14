@@ -1,5 +1,12 @@
-import { OdooConnection } from "./odooConnection";
+import { IHttpService } from "../services/http/httpService";
+import { IHeaders, OdooConnection } from "./odooConnection";
 import { OdooConnectionProtocol } from "./odooConnectionProtocol";
+
+export interface IJsonRpcResult<T> {
+  id: number;
+  jsonrpc: string;
+  result: T;
+}
 
 export class OdooJsonRpcConnection extends OdooConnection {
   constructor(
@@ -8,7 +15,8 @@ export class OdooJsonRpcConnection extends OdooConnection {
     db: string,
     username: string,
     password: string,
-    secure: boolean
+    secure: boolean,
+    httpService: IHttpService
   ) {
     super(
       hostname,
@@ -17,20 +25,43 @@ export class OdooJsonRpcConnection extends OdooConnection {
       username,
       password,
       OdooConnectionProtocol.JSON_RPC,
-      secure
+      secure,
+      httpService
     );
+  }
+
+  public async call<TResult>(
+    service: string,
+    method: string,
+    ...args: any[]
+  ): Promise<TResult> {
+    const resp = await super.call<IJsonRpcResult<TResult>>(
+      service,
+      method,
+      args
+    );
+    return resp.result;
   }
 
   protected buildBody(service: string, method: string, ...args: any[]): string {
     return JSON.stringify({
       id: Date.now(),
       jsonrpc: "2.0",
-      method: "call",
       params: {
         service,
         method,
         args
       }
     });
+  }
+
+  protected buildHeaders(): IHeaders {
+    return {
+      "Content-Type": "application/json; charset=utf-8"
+    };
+  }
+
+  protected parseBody<TResult>(body: string): TResult {
+    return JSON.parse(body) as TResult;
   }
 }

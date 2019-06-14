@@ -2,6 +2,7 @@ import { IOdooConnection } from "./connections/odooConnection";
 import { OdooConnectionProtocol } from "./connections/odooConnectionProtocol";
 import { OdooJsonRpcConnection } from "./connections/odooJsonRpcConnection";
 import { OdooXmlRpcConnection } from "./connections/odooXmlRpcConnection";
+import { IHttpService } from "./services/http/httpService";
 
 export function createOdooConnection(
   hostname: string,
@@ -10,7 +11,8 @@ export function createOdooConnection(
   username: string,
   password: string,
   protocol: OdooConnectionProtocol = OdooConnectionProtocol.JSON_RPC,
-  secure: boolean = true
+  secure: boolean = true,
+  httpService: IHttpService
 ): IOdooConnection | null {
   if (protocol === OdooConnectionProtocol.JSON_RPC) {
     return new OdooJsonRpcConnection(
@@ -19,7 +21,8 @@ export function createOdooConnection(
       db,
       username,
       password,
-      secure
+      secure,
+      httpService
     );
   }
 
@@ -30,7 +33,8 @@ export function createOdooConnection(
       db,
       username,
       password,
-      secure
+      secure,
+      httpService
     );
   }
 

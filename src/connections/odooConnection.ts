@@ -6,6 +6,10 @@ import { IOdooService, OdooService } from "../services/OdooService";
 import { OdooServiceType } from "../services/odooServiceType";
 import { OdooConnectionProtocol } from "./odooConnectionProtocol";
 
+export interface IHeaders {
+  [key: string]: string;
+}
+
 export interface IOdooConnection {
   hostname: string;
   port: number;
@@ -15,8 +19,7 @@ export interface IOdooConnection {
   protocol: OdooConnectionProtocol;
   secure: boolean;
   uid?: number;
-  baseUrl: string;
-  httpService?: IHttpService;
+  httpService: IHttpService;
   // version: () => Promise<any>;
   // authenticate: () => Promise<boolean>;
   // login: () => Promise<boolean>;
@@ -28,6 +31,11 @@ export interface IOdooConnection {
   getServiceByName: (name: string) => IOdooService;
   getService: (type: OdooServiceType) => IOdooService;
   getModel: <TModel>(name: string) => IOdooModel<TModel>;
+  call: <TResult>(
+    service: string,
+    method: string,
+    ...args: any[]
+  ) => Promise<TResult>;
 }
 
 export abstract class OdooConnection implements IOdooConnection {
@@ -39,8 +47,7 @@ export abstract class OdooConnection implements IOdooConnection {
   public protocol: OdooConnectionProtocol;
   public secure: boolean;
   public uid?: number;
-  public baseUrl: string;
-  public httpService?: IHttpService;
+  public httpService: IHttpService;
 
   constructor(
     hostname: string,
@@ -50,7 +57,7 @@ export abstract class OdooConnection implements IOdooConnection {
     password: string,
     protocol: OdooConnectionProtocol,
     secure: boolean,
-    httpService?: IHttpService
+    httpService: IHttpService
   ) {
     this.hostname = hostname;
     this.port = port;
@@ -59,7 +66,6 @@ export abstract class OdooConnection implements IOdooConnection {
     this.password = password;
     this.protocol = protocol;
     this.secure = secure;
-    this.baseUrl = this.buildBaseUrl();
     this.httpService = httpService;
   }
 
@@ -83,7 +89,19 @@ export abstract class OdooConnection implements IOdooConnection {
     return new OdooModel(name, new OdooObjectService(this));
   }
 
-  protected buildBaseUrl(): string {
+  public async call<TResult>(
+    service: string,
+    method: string,
+    ...args: any[]
+  ): Promise<TResult> {
+    const url = this.buildUrl(service);
+    const headers = this.buildHeaders();
+    const body = this.buildBody(service, method, ...args);
+    const respBody = await this.httpService.post(url, body, headers);
+    return this.parseBody<TResult>(respBody);
+  }
+
+  protected buildUrl(service: string): string {
     return `${this.secure ? "https" : "http"}://${this.hostname}:${this.port}/${
       this.protocol
     }`;
@@ -94,4 +112,8 @@ export abstract class OdooConnection implements IOdooConnection {
     method: string,
     ...args: any[]
   ): string;
+
+  protected abstract buildHeaders(): IHeaders;
+
+  protected abstract parseBody<TResult>(body: any): TResult;
 }
