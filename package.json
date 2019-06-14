@@ -2,10 +2,10 @@
   "name": "odoo-client-js",
   "version": "1.0.0",
   "description": "A javascript odoo jsonrpc client",
-  "main": "/dist/index.js",
-  "types": "/dist/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "files": [
-    "/dist/**/*"
+    "./lib/**/*"
   ],
   "scripts": {
     "build": "tsc",

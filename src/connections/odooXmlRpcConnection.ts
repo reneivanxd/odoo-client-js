@@ -1,5 +1,5 @@
-import { IHttpService } from "../services/http/httpService";
-import { IHeaders, OdooConnection } from "./odooConnection";
+import { IHeaders, IHttpService } from "../services/http/httpService";
+import { OdooConnection } from "./odooConnection";
 import { OdooConnectionProtocol } from "./odooConnectionProtocol";
 
 export interface IXmlRpcResult<T> {
@@ -8,22 +8,18 @@ export interface IXmlRpcResult<T> {
 
 export class OdooXmlRpcConnection extends OdooConnection {
   constructor(
-    hostname: string,
-    port: number,
+    baseUrl: string,
     db: string,
     username: string,
     password: string,
-    secure: boolean,
     httpService: IHttpService
   ) {
     super(
-      hostname,
-      port,
+      baseUrl,
       db,
       username,
       password,
       OdooConnectionProtocol.XML_RPC,
-      secure,
       httpService
     );
   }
@@ -46,7 +42,7 @@ export class OdooXmlRpcConnection extends OdooConnection {
   }
 
   protected buildBody(service: string, method: string, ...args: any[]): string {
-    return "";
+    throw new Error("Not Implemented");
   }
 
   protected buildHeaders(): IHeaders {
@@ -55,7 +51,7 @@ export class OdooXmlRpcConnection extends OdooConnection {
     };
   }
 
-  protected parseBody<TResult>(body: string): TResult {
-    return {} as TResult;
+  protected parseBody<TResult>(body: any): TResult {
+    throw new Error("Not Implemented");
   }
 }

@@ -5,38 +5,41 @@ import { OdooXmlRpcConnection } from "./connections/odooXmlRpcConnection";
 import { IHttpService } from "./services/http/httpService";
 
 export function createOdooConnection(
-  hostname: string,
-  port: number,
+  baseUrl: string,
   db: string,
   username: string,
   password: string,
-  protocol: OdooConnectionProtocol = OdooConnectionProtocol.JSON_RPC,
-  secure: boolean = true,
-  httpService: IHttpService
-): IOdooConnection | null {
+  httpService: IHttpService,
+  protocol: OdooConnectionProtocol = OdooConnectionProtocol.JSON_RPC
+): IOdooConnection {
   if (protocol === OdooConnectionProtocol.JSON_RPC) {
     return new OdooJsonRpcConnection(
-      hostname,
-      port,
+      baseUrl,
       db,
       username,
       password,
-      secure,
       httpService
     );
   }
 
   if (protocol === OdooConnectionProtocol.XML_RPC) {
     return new OdooXmlRpcConnection(
-      hostname,
-      port,
+      baseUrl,
       db,
       username,
       password,
-      secure,
       httpService
     );
   }
 
-  return null;
+  throw new Error(`Not Implemented protocol ${protocol}`);
 }
+
+export * from "./connections/odooConnection";
+export * from "./connections/odooConnectionProtocol";
+export * from "./connections/odooJsonRpcConnection";
+export * from "./connections/odooXmlRpcConnection";
+export * from "./services/http/httpService";
+export * from "./models/odooModel";
+export * from "./models/odooModelDomain";
+export * from "./models/queryBuilder";

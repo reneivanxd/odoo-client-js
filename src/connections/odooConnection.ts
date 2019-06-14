@@ -1,92 +1,72 @@
 import { IOdooModel, OdooModel } from "../models/odooModel";
-import { IHttpService } from "../services/http/httpService";
-import { OdooCommonService } from "../services/odooCommonService";
-import { OdooObjectService } from "../services/odooObjectService";
-import { IOdooService, OdooService } from "../services/OdooService";
-import { OdooServiceType } from "../services/odooServiceType";
+import { IHeaders, IHttpService } from "../services/http/httpService";
 import { OdooConnectionProtocol } from "./odooConnectionProtocol";
 
-export interface IHeaders {
-  [key: string]: string;
+export interface IOdooVersion {
+  server_version: string;
+  server_serie: string;
+  protocol_version: number;
+  server_version_info: any[];
+}
+
+export interface IUserContext {
+  tz: string;
+  lang: string;
+}
+
+export interface IAuthResponse {
+  userId: number;
+  userContext: IUserContext;
 }
 
 export interface IOdooConnection {
-  hostname: string;
-  port: number;
+  baseUrl: string;
   db: string;
   username: string;
   password: string;
   protocol: OdooConnectionProtocol;
-  secure: boolean;
   uid?: number;
+  userContext?: IUserContext;
   httpService: IHttpService;
-  // version: () => Promise<any>;
-  // authenticate: () => Promise<boolean>;
-  // login: () => Promise<boolean>;
-  // search: () => Promise<any>;
-  // read: () => Promise<any>;
-  // search_read: () => Promise<any>;
-  // create: (data: any) => Promise<any>;
-  // write: (data: any) => Promise<any>;
-  getServiceByName: (name: string) => IOdooService;
-  getService: (type: OdooServiceType) => IOdooService;
+  version: () => Promise<IOdooVersion>;
+  authenticate: () => Promise<IAuthResponse>;
   getModel: <TModel>(name: string) => IOdooModel<TModel>;
   call: <TResult>(
     service: string,
     method: string,
     ...args: any[]
   ) => Promise<TResult>;
+  execute_kw: <TResult>(service: string, ...args: any[]) => Promise<TResult>;
 }
 
 export abstract class OdooConnection implements IOdooConnection {
-  public hostname: string;
-  public port: number;
+  public baseUrl: string;
   public db: string;
   public username: string;
   public password: string;
   public protocol: OdooConnectionProtocol;
-  public secure: boolean;
   public uid?: number;
+  public userContext?: IUserContext;
   public httpService: IHttpService;
 
   constructor(
-    hostname: string,
-    port: number,
+    baseUrl: string,
     db: string,
     username: string,
     password: string,
     protocol: OdooConnectionProtocol,
-    secure: boolean,
     httpService: IHttpService
   ) {
-    this.hostname = hostname;
-    this.port = port;
+    this.baseUrl = baseUrl;
     this.db = db;
     this.username = username;
     this.password = password;
     this.protocol = protocol;
-    this.secure = secure;
     this.httpService = httpService;
   }
 
-  public getService(type: OdooServiceType): IOdooService {
-    if (type === OdooServiceType.OBJECT) {
-      return new OdooObjectService(this);
-    }
-
-    if (type === OdooServiceType.COMMON) {
-      return new OdooCommonService(this);
-    }
-
-    return this.getServiceByName(type);
-  }
-
-  public getServiceByName(name: string): IOdooService {
-    return new OdooService(name, this);
-  }
-
   public getModel<TModel = any>(name: string): IOdooModel<TModel> {
-    return new OdooModel(name, new OdooObjectService(this));
+    return new OdooModel<TModel>(name, this);
   }
 
   public async call<TResult>(
@@ -101,8 +81,50 @@ export abstract class OdooConnection implements IOdooConnection {
     return this.parseBody<TResult>(respBody);
   }
 
+  public async execute_kw<TResult>(
+    service: string,
+    ...args: any[]
+  ): Promise<TResult> {
+    if (!this.uid) {
+      await this.authenticate();
+    }
+
+    return this.call<TResult>(
+      service,
+      "execute_kw",
+      this.db,
+      this.uid,
+      this.password,
+      ...args
+    );
+  }
+
+  public async authenticate(): Promise<IAuthResponse> {
+    this.uid = await this.call<number>(
+      "common",
+      "authenticate",
+      this.db,
+      this.username,
+      this.password,
+      []
+    );
+
+    this.userContext = await this.execute_kw<IUserContext>(
+      "object",
+      "res.users",
+      "context_get",
+      []
+    );
+
+    return { userId: this.uid, userContext: this.userContext };
+  }
+
+  public version(): Promise<IOdooVersion> {
+    return this.call<IOdooVersion>("common", "version");
+  }
+
   protected buildUrl(service: string): string {
-    return `${this.secure ? "https" : "http"}://${this.hostname}:${this.port}/${
+    return `${this.baseUrl}${this.baseUrl.endsWith("/") ? "" : "/"}${
       this.protocol
     }`;
   }
