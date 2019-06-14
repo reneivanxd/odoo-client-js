@@ -1,6 +1,6 @@
 import { IOdooConnection } from "../connections/odooConnection";
 import { Domain } from "./odooModelDomain";
-import { QueryBuilder } from "./queryBuilder";
+import { QueryBuilder, IQueryBuilder } from "./queryBuilder";
 
 export interface IFieldsInfo {
   [key: string]: { [key: string]: any };
@@ -27,7 +27,7 @@ export interface IOdooModel<T> {
   ) => Promise<T[]>;
   searchCount: (domain: Domain) => Promise<number>;
   getFields: (attributes?: string[]) => Promise<IFieldsInfo>;
-  query: (fields?: string[]) => QueryBuilder<T>;
+  query: (fields?: string[]) => IQueryBuilder<T>;
 }
 
 export class OdooModel<T = any> implements IOdooModel<T> {
@@ -116,8 +116,8 @@ export class OdooModel<T = any> implements IOdooModel<T> {
     );
   }
 
-  public query(fields?: string[]): QueryBuilder<T> {
+  public query(fields?: string[]): IQueryBuilder<T> {
     const fieldList = fields || this.fields || [];
-    return new QueryBuilder(this, fields);
+    return new QueryBuilder<T>(this, fields);
   }
 }
