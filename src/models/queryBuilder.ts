@@ -1,8 +1,10 @@
+import { IOdooConnection } from "../connections/odooConnection";
 import { IOdooModel } from "./odooModel";
 import { Domain } from "./odooModelDomain";
 
 export interface IQueryBuilder<T> {
-  filter: (domain: Domain) => IQueryBuilder<T>;
+  select: (fields?: string[]) => IQueryBuilder<T>;
+  where: (domain: Domain) => IQueryBuilder<T>;
   orderBy: (order: string) => IQueryBuilder<T>;
   skip: (offset: number) => IQueryBuilder<T>;
   take: (limit: number) => IQueryBuilder<T>;
@@ -14,6 +16,17 @@ export interface IQueryBuilder<T> {
 }
 
 export class QueryBuilder<T> implements IQueryBuilder<T> {
+  public static fromConnection<T = any>(
+    odooConnection: IOdooConnection,
+    modelName: string
+  ): IQueryBuilder<T> {
+    return new QueryBuilder<T>(odooConnection.getModel<T>(modelName));
+  }
+
+  public static fromModel<T = any>(odooModel: IOdooModel<T>): IQueryBuilder<T> {
+    return new QueryBuilder<T>(odooModel);
+  }
+
   private model: IOdooModel<T>;
   private fields: string[];
   private domain: Domain;
@@ -23,11 +36,16 @@ export class QueryBuilder<T> implements IQueryBuilder<T> {
 
   constructor(model: IOdooModel<T>, fields?: string[]) {
     this.model = model;
-    this.fields = fields || [];
+    this.fields = fields || model.fields || [];
     this.domain = [];
   }
 
-  public filter(domain: Domain): IQueryBuilder<T> {
+  public select(fields?: string[]): IQueryBuilder<T> {
+    this.fields = fields || [];
+    return this;
+  }
+
+  public where(domain: Domain): IQueryBuilder<T> {
     this.domain = domain;
     return this;
   }
