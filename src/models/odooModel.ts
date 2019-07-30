@@ -28,6 +28,10 @@ export interface IOdooModel<T> {
     searchCount: (domain: Domain) => Promise<number>;
     getFields: (attributes?: string[]) => Promise<IFieldsInfo>;
     select: (fields?: string[]) => IQueryBuilder<T>;
+    create: (object: T) => Promise<number>;
+    update: (id: number, object: T) => Promise<any>;
+    delete: (id: number) => Promise<any>;
+    call: <TResult>(method: string, ...args: any[]) => Promise<TResult>;
 }
 
 export class OdooModel<T = any> implements IOdooModel<T> {
@@ -53,7 +57,7 @@ export class OdooModel<T = any> implements IOdooModel<T> {
             this.service,
             this.name,
             "search",
-            domain,
+            [domain],
             {
                 order,
                 offset,
@@ -85,7 +89,7 @@ export class OdooModel<T = any> implements IOdooModel<T> {
             this.service,
             this.name,
             "search_read",
-            domain,
+            [domain],
             {
                 fields: fields || this.fields || [],
                 order,
@@ -100,7 +104,7 @@ export class OdooModel<T = any> implements IOdooModel<T> {
             this.service,
             this.name,
             "search_count",
-            domain
+            [domain]
         );
     }
 
@@ -119,5 +123,41 @@ export class OdooModel<T = any> implements IOdooModel<T> {
     public select(fields?: string[]): IQueryBuilder<T> {
         const fieldList = fields || this.fields || [];
         return new QueryBuilder<T>(this, fields);
+    }
+
+    public create(object: T): Promise<number> {
+        return this.connection.execute_kw<number>(
+            this.service,
+            this.name,
+            "create",
+            [object]
+        );
+    }
+
+    public update(id: number, object: T): Promise<any> {
+        return this.connection.execute_kw<any>(
+            this.service,
+            this.name,
+            "write",
+            [[id], object]
+        );
+    }
+
+    public delete(id: number): Promise<any> {
+        return this.connection.execute_kw<any>(
+            this.service,
+            this.name,
+            "unlink",
+            [[id]]
+        );
+    }
+
+    public call<TResult>(method: string, ...args: any[]): Promise<TResult> {
+        return this.connection.execute_kw<TResult>(
+            this.service,
+            this.name,
+            method,
+            ...args
+        );
     }
 }

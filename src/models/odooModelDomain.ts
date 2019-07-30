@@ -23,4 +23,4 @@ export type DomainValue =
     | string[]
     | number[];
 export type DomainTuple = [string, DomainOperator, DomainValue];
-export type Domain = Array<Array<DomainTuple | "|" | "&" | "!">>;
+export type Domain = Array<DomainTuple | "|" | "&" | "!">;
