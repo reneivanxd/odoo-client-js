@@ -4,7 +4,18 @@ import { OdooJsonRpcConnection } from "./connections/odooJsonRpcConnection";
 import { OdooXmlRpcConnection } from "./connections/odooXmlRpcConnection";
 import { IHttpService } from "./services/http/httpService";
 
-export function createOdooConnection(
+/**
+ * A function to create a new [[OdooConnection]] instance.
+ *
+ * @param baseUrl - Odoo server url.
+ * @param db - Odoo database name.
+ * @param username - Odoo username.
+ * @param password - Odoo user password.
+ * @param httpService - http service used by the connection see [[IHttpService]] for more details.
+ * @param protocol - Odoo API protocol see [[OdooConnectionProtocol]] for more details, default `JSON_RPC`.
+ * @returns - new [[OdooConnection]] instance.
+ */
+export function createConnection(
     baseUrl: string,
     db: string,
     username: string,

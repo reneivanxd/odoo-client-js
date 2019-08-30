@@ -1,37 +1,39 @@
 {
-  "name": "odoo-client-js",
-  "version": "1.0.0",
-  "description": "A javascript odoo jsonrpc client",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "files": [
-    "./lib/**/*"
-  ],
-  "scripts": {
-    "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/reneivanxd/odoo-client-js.git"
-  },
-  "keywords": [
-    "odoo",
-    "jsonrpc",
-    "odoo-client"
-  ],
-  "author": "Rene Heinsen <reneheinsen2@gmail.com>",
-  "license": "ISC",
-  "devDependencies": {
-    "prettier": "1.17.1",
-    "tslint": "5.17.0",
-    "tslint-config-prettier": "1.18.0",
-    "typescript": "3.5.1"
-  },
-  "bugs": {
-    "url": "https://github.com/reneivanxd/odoo-client-js/issues"
-  },
-  "homepage": "https://github.com/reneivanxd/odoo-client-js"
+    "name": "odoo-client-js",
+    "version": "1.0.0",
+    "description": "A javascript odoo jsonrpc client",
+    "main": "./lib/index.js",
+    "types": "./lib/index.d.ts",
+    "files": [
+        "./lib/**/*"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "doc": "typedoc --options typedoc.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/reneivanxd/odoo-client-js.git"
+    },
+    "keywords": [
+        "odoo",
+        "jsonrpc",
+        "odoo-client"
+    ],
+    "author": "Rene Heinsen <reneheinsen2@gmail.com>",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "1.17.1",
+        "tslint": "5.17.0",
+        "tslint-config-prettier": "1.18.0",
+        "typedoc": "^0.15.0",
+        "typescript": "3.5.1"
+    },
+    "bugs": {
+        "url": "https://github.com/reneivanxd/odoo-client-js/issues"
+    },
+    "homepage": "https://github.com/reneivanxd/odoo-client-js"
 }
