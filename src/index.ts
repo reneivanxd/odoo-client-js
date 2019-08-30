@@ -13,7 +13,7 @@ import { IHttpService } from "./services/http/httpService";
  * @param password - Odoo user password.
  * @param httpService - http service used by the connection see [[IHttpService]] for more details.
  * @param protocol - Odoo API protocol see [[OdooConnectionProtocol]] for more details, default `JSON_RPC`.
- * @returns - new [[OdooConnection]] instance.
+ * @returns - new [[OdooJsonRpcConnection]] instance if protocol is `JSON_RPC` or [[OdooXmlRpcConnection]] if is `XML_RPC`; error otherwise.
  */
 export function createConnection(
     baseUrl: string,
@@ -54,3 +54,4 @@ export * from "./services/http/httpService";
 export * from "./models/odooModel";
 export * from "./models/odooModelDomain";
 export * from "./models/queryBuilder";
+export * from "./models/auth/authModel";
