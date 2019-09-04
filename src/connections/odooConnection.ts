@@ -120,18 +120,14 @@ export abstract class OdooConnection implements IOdooConnection {
     }
 
     /**
-     * Get Odoo server version information, see [[IOdooVersion]]
-     *
-     * @returns - A Promise.
+     * @inheritdoc
      */
     public version(): Promise<IOdooVersion> {
         return this.call<IOdooVersion>("common", "version");
     }
 
     /**
-     * Authenticate odoo user
-     *
-     * @returns - A Promise.
+     * @inheritdoc
      */
     public async authenticate(): Promise<IAuthResponse> {
         this.uid = await this.call<number>(
@@ -154,24 +150,14 @@ export abstract class OdooConnection implements IOdooConnection {
     }
 
     /**
-     * Get a Odoo model instance, see [[OdooModel]]
-     *
-     * @typeparam TModel - Model custom type
-     * @param name - Odoo model name, eq. sale.order
-     * @returns - new [[OdooModel]] instance.
+     * @inheritdoc
      */
     public getModel<TModel = any>(name: string): IOdooModel<TModel> {
         return new OdooModel<TModel>(name, this);
     }
 
     /**
-     * Call Odoo server
-     *
-     * @typeparam TResult - Result map model
-     * @param service - Odoo service name, eq. object
-     * @param method  - Odoo method name, eq. search
-     * @param args - Odoo method arguments
-     * @returns - A Promise.
+     * @inheritdoc
      */
     public async call<TResult>(
         service: string,
@@ -186,12 +172,7 @@ export abstract class OdooConnection implements IOdooConnection {
     }
 
     /**
-     * Call odoo server, but first injects authentication arguments. see [[call]]
-     *
-     * @typeparam TResult - Result map model
-     * @param service - Odoo service name, eq. object
-     * @param args - Odoo method arguments
-     * @returns - A Promise.
+     * @inheritdoc
      */
     public async execute_kw<TResult>(
         service: string,

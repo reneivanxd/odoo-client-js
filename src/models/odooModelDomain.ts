@@ -1,3 +1,6 @@
+/**
+ * Odoo Query Domain Tuple Operator
+ */
 export type DomainOperator =
     | "="
     | "!="
@@ -15,6 +18,10 @@ export type DomainOperator =
     | "in"
     | "not in"
     | "child_of";
+
+/**
+ * Odoo Query Domain Tuple Value
+ */
 export type DomainValue =
     | string
     | number
@@ -22,5 +29,17 @@ export type DomainValue =
     | null
     | string[]
     | number[];
+
+/**
+ * Odoo Query Domain Tuple. See [[DomainOperator]] and [[DomainValue]]
+ *
+ * Tuple is build as (models_field_name, domain_operator, domain_value)
+ */
 export type DomainTuple = [string, DomainOperator, DomainValue];
+
+/**
+ * Odoo Query Domain. see [[DomainTuple]].
+ *
+ * Holds a list of [[DomainTuple]] or operators (|, &, !)
+ */
 export type Domain = Array<DomainTuple | "|" | "&" | "!">;

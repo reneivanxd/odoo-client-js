@@ -2,13 +2,28 @@ import { IHeaders, IHttpService } from "../services/http/httpService";
 import { OdooConnection } from "./odooConnection";
 import { OdooConnectionProtocol } from "./odooConnectionProtocol";
 
+/**
+ * Odoo JsonRpc Response Interface
+ */
 export interface IJsonRpcResult<T> {
     id: number;
     jsonrpc: string;
     result: T;
 }
 
+/**
+ * Odoo JsonRpc Connection implementation, see [[OdooConnection]].
+ */
 export class OdooJsonRpcConnection extends OdooConnection {
+    /**
+     * Odoo JsonRpc connection constructor
+     *
+     * @param baseUrl - Odoo server base url
+     * @param db - Odoo database name
+     * @param username - Odoo username
+     * @param password - Odoo user password
+     * @param httpService - Http service instance
+     */
     constructor(
         baseUrl: string,
         db: string,
@@ -26,6 +41,9 @@ export class OdooJsonRpcConnection extends OdooConnection {
         );
     }
 
+    /**
+     * @inheritdoc
+     */
     public async call<TResult>(
         service: string,
         method: string,
@@ -39,6 +57,13 @@ export class OdooJsonRpcConnection extends OdooConnection {
         return resp.result;
     }
 
+    /**
+     * Builds a JsonRpc request body
+     *
+     * @param service - Odoo service name, eq. object
+     * @param method - Odoo method name, eq. search
+     * @returns - Json string
+     */
     protected buildBody(
         service: string,
         method: string,
@@ -56,12 +81,24 @@ export class OdooJsonRpcConnection extends OdooConnection {
         });
     }
 
+    /**
+     * Builds JsonRpc request headers.
+     *
+     * @returns - request headers, see [[IHeaders]]
+     */
     protected buildHeaders(): IHeaders {
         return {
             "Content-Type": "application/json; charset=utf-8"
         };
     }
 
+    /**
+     * Parses odoo JsonRpc api response
+     *
+     * @typeparam TResult - Body parse type
+     * @param body - Response body
+     * @returns - Parsed object
+     */
     protected parseBody<TResult>(body: any): TResult {
         return (typeof body === "string" ? JSON.parse(body) : body) as TResult;
     }
