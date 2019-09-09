@@ -98,13 +98,13 @@
 								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="odoomodel.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="odoomodel.html#connection" class="tsd-kind-icon">connection</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="odoomodel.html#fields" class="tsd-kind-icon">fields</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="odoomodel.html#name" class="tsd-kind-icon">name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="odoomodel.html#service" class="tsd-kind-icon">service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#connection" class="tsd-kind-icon">connection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#fields" class="tsd-kind-icon">fields</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#service" class="tsd-kind-icon">service</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -137,16 +137,31 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L41">models/odooModel.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L117">models/odooModel.ts:117</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new Odoo model instance</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Odoo Model Name</p>
+										</div>
+									</div>
 								</li>
 								<li>
 									<h5>connection: <a href="../interfaces/iodooconnection.html" class="tsd-signature-type">IOdooConnection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Odoo Connection Object</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="odoomodel.html" class="tsd-signature-type">OdooModel</a></h4>
@@ -154,51 +169,67 @@
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="connection" class="tsd-anchor"></a>
-					<h3>connection</h3>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> connection</h3>
 					<div class="tsd-signature tsd-kind-icon">connection<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iodooconnection.html" class="tsd-signature-type">IOdooConnection</a></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#connection">connection</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L40">models/odooModel.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L113">models/odooModel.ts:113</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Connection Object, see <a href="../interfaces/iodooconnection.html">IOdooConnection</a></p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="fields" class="tsd-anchor"></a>
-					<h3>fields</h3>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> fields</h3>
 					<div class="tsd-signature tsd-kind-icon">fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#fields">fields</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L41">models/odooModel.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L117">models/odooModel.ts:117</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Model Fields</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> name</h3>
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#name">name</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L38">models/odooModel.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L105">models/odooModel.ts:105</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Model Name</p>
+						</div>
+					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="service" class="tsd-anchor"></a>
-					<h3>service</h3>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> service</h3>
 					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#service">service</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L39">models/odooModel.ts:39</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L109">models/odooModel.ts:109</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Service Name, always &quot;object&quot;</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -212,10 +243,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#call">call</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L155">models/odooModel.ts:155</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L222">models/odooModel.ts:222</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calls any method in odoo API</p>
+								</div>
+							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
@@ -244,10 +281,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#create">create</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L128">models/odooModel.ts:128</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L201">models/odooModel.ts:201</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a records</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -267,10 +310,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L146">models/odooModel.ts:146</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L215">models/odooModel.ts:215</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deletes a record</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -290,10 +339,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#getfields">getFields</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L111">models/odooModel.ts:111</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L185">models/odooModel.ts:185</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Call odoo api fields_get method</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -313,10 +368,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#read">read</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L69">models/odooModel.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L151">models/odooModel.ts:151</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Call odoo api read method</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -339,10 +400,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#search">search</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L50">models/odooModel.ts:50</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L135">models/odooModel.ts:135</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Call odoo api search method</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -371,10 +438,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#searchcount">searchCount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L102">models/odooModel.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L178">models/odooModel.ts:178</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Call odoo api search_count method</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -394,10 +467,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#searchread">searchRead</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L81">models/odooModel.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L160">models/odooModel.ts:160</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Call odoo api search_read method</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -429,10 +508,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#select">select</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L123">models/odooModel.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L194">models/odooModel.ts:194</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p> Creates a query builder from current model, see <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a></p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -452,10 +537,16 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#update">update</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/b0764cf/src/models/odooModel.ts#L137">models/odooModel.ts:137</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L208">models/odooModel.ts:208</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Updates a records</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -498,16 +589,16 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="odoomodel.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="odoomodel.html#connection" class="tsd-kind-icon">connection</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="odoomodel.html#fields" class="tsd-kind-icon">fields</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="odoomodel.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 								<a href="odoomodel.html#service" class="tsd-kind-icon">service</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">

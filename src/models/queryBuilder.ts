@@ -18,7 +18,7 @@ export interface IQueryBuilder<T> {
     /**
      * Set the domain filter
      *
-     * @param domain - Odoo domain, see [Domain]
+     * @param domain - Odoo domain, see [[Domain]]
      * @returns - Current instance
      */
     where(domain: Domain): IQueryBuilder<T>;
@@ -132,7 +132,7 @@ export class QueryBuilder<T> implements IQueryBuilder<T> {
      */
     constructor(model: IOdooModel<T>, fields?: string[]) {
         this.model = model;
-        this.fields = fields || model.fields || [];
+        this.fields = fields || [];
         this.domain = [];
     }
 
