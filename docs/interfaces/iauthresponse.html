@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IXmlRpcResult | odoo-client-js</title>
+	<title>IAuthResponse | odoo-client-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="ixmlrpcresult.html">IXmlRpcResult</a>
+					<a href="iauthresponse.html">IAuthResponse</a>
 				</li>
 			</ul>
-			<h1>Interface IXmlRpcResult&lt;T&gt;</h1>
+			<h1>Interface IAuthResponse</h1>
 		</div>
 	</div>
 </header>
@@ -69,23 +69,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Odoo XmlRpc Response Interface</p>
+						<p>Odoo api authentication response model</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IXmlRpcResult</span>
+						<span class="target">IAuthResponse</span>
 					</li>
 				</ul>
 			</section>
@@ -96,7 +88,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ixmlrpcresult.html#methodresponse" class="tsd-kind-icon">method<wbr>Response</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iauthresponse.html#usercontext" class="tsd-kind-icon">user<wbr>Context</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iauthresponse.html#userid" class="tsd-kind-icon">user<wbr>Id</a></li>
 							</ul>
 						</section>
 					</div>
@@ -105,14 +98,34 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="methodresponse" class="tsd-anchor"></a>
-					<h3>method<wbr>Response</h3>
-					<div class="tsd-signature tsd-kind-icon">method<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+					<a name="usercontext" class="tsd-anchor"></a>
+					<h3>user<wbr>Context</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Context<span class="tsd-signature-symbol">:</span> <a href="iusercontext.html" class="tsd-signature-type">IUserContext</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooXmlRpcConnection.ts#L9">connections/odooXmlRpcConnection.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/auth/authModel.ts#L48">models/auth/authModel.ts:48</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>User Context, see <a href="iusercontext.html">IUserContext</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="userid" class="tsd-anchor"></a>
+					<h3>user<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/auth/authModel.ts#L44">models/auth/authModel.ts:44</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>User Identifier</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -144,9 +157,21 @@
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="../classes/querybuilder.html" class="tsd-kind-icon">Query<wbr>Builder</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="iauthresponse.html" class="tsd-kind-icon">IAuth<wbr>Response</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iauthresponse.html#usercontext" class="tsd-kind-icon">user<wbr>Context</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iauthresponse.html#userid" class="tsd-kind-icon">user<wbr>Id</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="ifieldsinfo.html" class="tsd-kind-icon">IFields<wbr>Info</a>
 					</li>
@@ -174,18 +199,9 @@
 					<li class=" tsd-kind-interface">
 						<a href="iusercontext.html" class="tsd-kind-icon">IUser<wbr>Context</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-has-type-parameter">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="ixmlrpcresult.html" class="tsd-kind-icon">IXml<wbr>Rpc<wbr>Result</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ixmlrpcresult.html#methodresponse" class="tsd-kind-icon">method<wbr>Response</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#domain" class="tsd-kind-icon">Domain</a>
 					</li>

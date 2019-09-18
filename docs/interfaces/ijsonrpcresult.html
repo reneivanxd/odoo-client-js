@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IHttpService | odoo-client-js</title>
+	<title>IJsonRpcResult | odoo-client-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="ihttpservice.html">IHttpService</a>
+					<a href="ijsonrpcresult.html">IJsonRpcResult</a>
 				</li>
 			</ul>
-			<h1>Interface IHttpService</h1>
+			<h1>Interface IJsonRpcResult&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -69,15 +69,23 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Interface to declare an http service, making odoo connection independent of the http service or library used.</p>
+						<p>Odoo JsonRpc Response Interface</p>
 					</div>
 				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>T</h4>
+					</li>
+				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IHttpService</span>
+						<span class="target">IJsonRpcResult</span>
 					</li>
 				</ul>
 			</section>
@@ -86,62 +94,47 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Methods</h3>
+							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ihttpservice.html#post" class="tsd-kind-icon">post</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ijsonrpcresult.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ijsonrpcresult.html#jsonrpc" class="tsd-kind-icon">jsonrpc</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ijsonrpcresult.html#result" class="tsd-kind-icon">result</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="post" class="tsd-anchor"></a>
-					<h3>post</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">post<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, headers<span class="tsd-signature-symbol">: </span><a href="iheaders.html" class="tsd-signature-type">IHeaders</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/services/http/httpService.ts#L22">services/http/httpService.ts:22</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Function that <a href="../classes/odooconnection.html">OdooConnection</a> is going to call in order to connect with Odoo server</p>
-								</div>
-								<p>Must be a HTTP POST request.</p>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>url: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Odoo sever url</p>
-									</div>
-								</li>
-								<li>
-									<h5>data: <span class="tsd-signature-type">any</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Request body</p>
-									</div>
-								</li>
-								<li>
-									<h5>headers: <a href="iheaders.html" class="tsd-signature-type">IHeaders</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Request headers</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<ul>
-								<li>A Promise of a string or object</li>
-							</ul>
-						</li>
-					</ul>
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooJsonRpcConnection.ts#L9">connections/odooJsonRpcConnection.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="jsonrpc" class="tsd-anchor"></a>
+					<h3>jsonrpc</h3>
+					<div class="tsd-signature tsd-kind-icon">jsonrpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooJsonRpcConnection.ts#L10">connections/odooJsonRpcConnection.ts:10</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="result" class="tsd-anchor"></a>
+					<h3>result</h3>
+					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooJsonRpcConnection.ts#L11">connections/odooJsonRpcConnection.ts:11</a></li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 		</div>
@@ -182,21 +175,27 @@
 					<li class=" tsd-kind-interface">
 						<a href="iheaders.html" class="tsd-kind-icon">IHeaders</a>
 					</li>
+					<li class=" tsd-kind-interface">
+						<a href="ihttpservice.html" class="tsd-kind-icon">IHttp<wbr>Service</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface">
-						<a href="ihttpservice.html" class="tsd-kind-icon">IHttp<wbr>Service</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="ijsonrpcresult.html" class="tsd-kind-icon">IJson<wbr>Rpc<wbr>Result</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="ihttpservice.html#post" class="tsd-kind-icon">post</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ijsonrpcresult.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ijsonrpcresult.html#jsonrpc" class="tsd-kind-icon">jsonrpc</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ijsonrpcresult.html#result" class="tsd-kind-icon">result</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="ijsonrpcresult.html" class="tsd-kind-icon">IJson<wbr>Rpc<wbr>Result</a>
-					</li>
 					<li class=" tsd-kind-interface">
 						<a href="iodooconnection.html" class="tsd-kind-icon">IOdoo<wbr>Connection</a>
 					</li>

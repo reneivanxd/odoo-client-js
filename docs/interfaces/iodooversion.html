@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IJsonRpcResult | odoo-client-js</title>
+	<title>IOdooVersion | odoo-client-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="ijsonrpcresult.html">IJsonRpcResult</a>
+					<a href="iodooversion.html">IOdooVersion</a>
 				</li>
 			</ul>
-			<h1>Interface IJsonRpcResult&lt;T&gt;</h1>
+			<h1>Interface IOdooVersion</h1>
 		</div>
 	</div>
 </header>
@@ -69,23 +69,15 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Odoo JsonRpc Response Interface</p>
+						<p>Odoo version information model</p>
 					</div>
 				</div>
-			</section>
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-					</li>
-				</ul>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IJsonRpcResult</span>
+						<span class="target">IOdooVersion</span>
 					</li>
 				</ul>
 			</section>
@@ -96,9 +88,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ijsonrpcresult.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ijsonrpcresult.html#jsonrpc" class="tsd-kind-icon">jsonrpc</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ijsonrpcresult.html#result" class="tsd-kind-icon">result</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#protocol_version" class="tsd-kind-icon">protocol_<wbr>version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#server_serie" class="tsd-kind-icon">server_<wbr>serie</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#server_version" class="tsd-kind-icon">server_<wbr>version</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#server_version_info" class="tsd-kind-icon">server_<wbr>version_<wbr>info</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,34 +100,64 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="id" class="tsd-anchor"></a>
-					<h3>id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="protocol_version" class="tsd-anchor"></a>
+					<h3>protocol_<wbr>version</h3>
+					<div class="tsd-signature tsd-kind-icon">protocol_<wbr>version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L9">connections/odooJsonRpcConnection.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/auth/authModel.ts#L16">models/auth/authModel.ts:16</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Server protocol version</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="jsonrpc" class="tsd-anchor"></a>
-					<h3>jsonrpc</h3>
-					<div class="tsd-signature tsd-kind-icon">jsonrpc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="server_serie" class="tsd-anchor"></a>
+					<h3>server_<wbr>serie</h3>
+					<div class="tsd-signature tsd-kind-icon">server_<wbr>serie<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L10">connections/odooJsonRpcConnection.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/auth/authModel.ts#L12">models/auth/authModel.ts:12</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Server series</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="result" class="tsd-anchor"></a>
-					<h3>result</h3>
-					<div class="tsd-signature tsd-kind-icon">result<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+					<a name="server_version" class="tsd-anchor"></a>
+					<h3>server_<wbr>version</h3>
+					<div class="tsd-signature tsd-kind-icon">server_<wbr>version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L11">connections/odooJsonRpcConnection.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/auth/authModel.ts#L8">models/auth/authModel.ts:8</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Server string version</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="server_version_info" class="tsd-anchor"></a>
+					<h3>server_<wbr>version_<wbr>info</h3>
+					<div class="tsd-signature tsd-kind-icon">server_<wbr>version_<wbr>info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/auth/authModel.ts#L20">models/auth/authModel.ts:20</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Server version details</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -178,33 +201,36 @@
 					<li class=" tsd-kind-interface">
 						<a href="ihttpservice.html" class="tsd-kind-icon">IHttp<wbr>Service</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-has-type-parameter">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="ijsonrpcresult.html" class="tsd-kind-icon">IJson<wbr>Rpc<wbr>Result</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ijsonrpcresult.html#id" class="tsd-kind-icon">id</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ijsonrpcresult.html#jsonrpc" class="tsd-kind-icon">jsonrpc</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="ijsonrpcresult.html#result" class="tsd-kind-icon">result</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface">
 						<a href="iodooconnection.html" class="tsd-kind-icon">IOdoo<wbr>Connection</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="iodoomodel.html" class="tsd-kind-icon">IOdoo<wbr>Model</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="iodooversion.html" class="tsd-kind-icon">IOdoo<wbr>Version</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iodooversion.html#protocol_version" class="tsd-kind-icon">protocol_<wbr>version</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iodooversion.html#server_serie" class="tsd-kind-icon">server_<wbr>serie</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iodooversion.html#server_version" class="tsd-kind-icon">server_<wbr>version</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="iodooversion.html#server_version_info" class="tsd-kind-icon">server_<wbr>version_<wbr>info</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
 					</li>

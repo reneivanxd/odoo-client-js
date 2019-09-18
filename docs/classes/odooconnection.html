@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>OdooJsonRpcConnection | odoo-client-js</title>
+	<title>OdooConnection | odoo-client-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="odoojsonrpcconnection.html">OdooJsonRpcConnection</a>
+					<a href="odooconnection.html">OdooConnection</a>
 				</li>
 			</ul>
-			<h1>Class OdooJsonRpcConnection</h1>
+			<h1>Class OdooConnection</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Odoo JsonRpc Connection implementation, see <a href="odooconnection.html">OdooConnection</a>.</p>
+						<p>Base odoo connection implementation, see <a href="../interfaces/iodooconnection.html">IOdooConnection</a></p>
 					</div>
 				</div>
 			</section>
@@ -77,10 +77,13 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<a href="odooconnection.html" class="tsd-signature-type">OdooConnection</a>
+						<span class="target">OdooConnection</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">OdooJsonRpcConnection</span>
+								<a href="odoojsonrpcconnection.html" class="tsd-signature-type">OdooJsonRpcConnection</a>
+							</li>
+							<li>
+								<a href="odooxmlrpcconnection.html" class="tsd-signature-type">OdooXmlRpcConnection</a>
 							</li>
 						</ul>
 					</li>
@@ -99,34 +102,34 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="odoojsonrpcconnection.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="odooconnection.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
+						<section class="tsd-index-section tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#db" class="tsd-kind-icon">db</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#httpservice" class="tsd-kind-icon">http<wbr>Service</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#password" class="tsd-kind-icon">password</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#protocol" class="tsd-kind-icon">protocol</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#uid" class="tsd-kind-icon">uid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#usercontext" class="tsd-kind-icon">user<wbr>Context</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#username" class="tsd-kind-icon">username</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#db" class="tsd-kind-icon">db</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#httpservice" class="tsd-kind-icon">http<wbr>Service</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#password" class="tsd-kind-icon">password</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#protocol" class="tsd-kind-icon">protocol</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#uid" class="tsd-kind-icon">uid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#usercontext" class="tsd-kind-icon">user<wbr>Context</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#username" class="tsd-kind-icon">username</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="odoojsonrpcconnection.html#authenticate" class="tsd-kind-icon">authenticate</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="odoojsonrpcconnection.html#buildbody" class="tsd-kind-icon">build<wbr>Body</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="odoojsonrpcconnection.html#buildheaders" class="tsd-kind-icon">build<wbr>Headers</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="odoojsonrpcconnection.html#buildurl" class="tsd-kind-icon">build<wbr>Url</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite"><a href="odoojsonrpcconnection.html#call" class="tsd-kind-icon">call</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="odoojsonrpcconnection.html#execute_kw" class="tsd-kind-icon">execute_<wbr>kw</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="odoojsonrpcconnection.html#getmodel" class="tsd-kind-icon">get<wbr>Model</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected"><a href="odoojsonrpcconnection.html#parsebody" class="tsd-kind-icon">parse<wbr>Body</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="odoojsonrpcconnection.html#version" class="tsd-kind-icon">version</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odooconnection.html#authenticate" class="tsd-kind-icon">authenticate</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#buildbody" class="tsd-kind-icon">build<wbr>Body</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#buildheaders" class="tsd-kind-icon">build<wbr>Headers</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="odooconnection.html#buildurl" class="tsd-kind-icon">build<wbr>Url</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="odooconnection.html#call" class="tsd-kind-icon">call</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="odooconnection.html#execute_kw" class="tsd-kind-icon">execute_<wbr>kw</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="odooconnection.html#getmodel" class="tsd-kind-icon">get<wbr>Model</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected"><a href="odooconnection.html#parsebody" class="tsd-kind-icon">parse<wbr>Body</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odooconnection.html#version" class="tsd-kind-icon">version</a></li>
 							</ul>
 						</section>
 					</div>
@@ -134,23 +137,22 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Odoo<wbr>Json<wbr>Rpc<wbr>Connection<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, httpService<span class="tsd-signature-symbol">: </span><a href="../interfaces/ihttpservice.html" class="tsd-signature-type">IHttpService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="odoojsonrpcconnection.html" class="tsd-signature-type">OdooJsonRpcConnection</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Odoo<wbr>Connection<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, protocol<span class="tsd-signature-symbol">: </span><a href="../enums/odooconnectionprotocol.html" class="tsd-signature-type">OdooConnectionProtocol</a>, httpService<span class="tsd-signature-symbol">: </span><a href="../interfaces/ihttpservice.html" class="tsd-signature-type">IHttpService</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="odooconnection.html" class="tsd-signature-type">OdooConnection</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L17">connections/odooJsonRpcConnection.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L94">connections/odooConnection.ts:94</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Odoo JsonRpc connection constructor</p>
+									<p>Odoo connection base constructor</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -188,6 +190,14 @@
 									</div>
 								</li>
 								<li>
+									<h5>protocol: <a href="../enums/odooconnectionprotocol.html" class="tsd-signature-type">OdooConnectionProtocol</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Odoo connection protocol</p>
+										</div>
+									</div>
+								</li>
+								<li>
 									<h5>httpService: <a href="../interfaces/ihttpservice.html" class="tsd-signature-type">IHttpService</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
@@ -196,21 +206,20 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="odoojsonrpcconnection.html" class="tsd-signature-type">OdooJsonRpcConnection</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="odooconnection.html" class="tsd-signature-type">OdooConnection</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="baseurl" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> base<wbr>Url</h3>
 					<div class="tsd-signature tsd-kind-icon">base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#baseurl">baseUrl</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L66">connections/odooConnection.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L66">connections/odooConnection.ts:66</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,14 +228,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="db" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> db</h3>
 					<div class="tsd-signature tsd-kind-icon">db<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#db">db</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L70">connections/odooConnection.ts:70</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L70">connections/odooConnection.ts:70</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -235,14 +243,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="httpservice" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> http<wbr>Service</h3>
 					<div class="tsd-signature tsd-kind-icon">http<wbr>Service<span class="tsd-signature-symbol">:</span> <a href="../interfaces/ihttpservice.html" class="tsd-signature-type">IHttpService</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#httpservice">httpService</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L94">connections/odooConnection.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L94">connections/odooConnection.ts:94</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -251,14 +258,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="password" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> password</h3>
 					<div class="tsd-signature tsd-kind-icon">password<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#password">password</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L78">connections/odooConnection.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L78">connections/odooConnection.ts:78</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,14 +273,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="protocol" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> protocol</h3>
 					<div class="tsd-signature tsd-kind-icon">protocol<span class="tsd-signature-symbol">:</span> <a href="../enums/odooconnectionprotocol.html" class="tsd-signature-type">OdooConnectionProtocol</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#protocol">protocol</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L82">connections/odooConnection.ts:82</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L82">connections/odooConnection.ts:82</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -283,14 +288,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="uid" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> uid</h3>
 					<div class="tsd-signature tsd-kind-icon">uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#uid">uid</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L86">connections/odooConnection.ts:86</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L86">connections/odooConnection.ts:86</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -299,14 +303,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="usercontext" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> user<wbr>Context</h3>
 					<div class="tsd-signature tsd-kind-icon">user<wbr>Context<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iusercontext.html" class="tsd-signature-type">IUserContext</a></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#usercontext">userContext</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L90">connections/odooConnection.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L90">connections/odooConnection.ts:90</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -315,14 +318,13 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 					<a name="username" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> username</h3>
 					<div class="tsd-signature tsd-kind-icon">username<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#username">username</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L74">connections/odooConnection.ts:74</a></li>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L74">connections/odooConnection.ts:74</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -334,19 +336,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="authenticate" class="tsd-anchor"></a>
 					<h3>authenticate</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">authenticate<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iauthresponse.html" class="tsd-signature-type">IAuthResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iodooconnection.html">IOdooConnection</a>.<a href="../interfaces/iodooconnection.html#authenticate">authenticate</a></p>
-								<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#authenticate">authenticate</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L132">connections/odooConnection.ts:132</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L132">connections/odooConnection.ts:132</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -361,23 +362,22 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="buildbody" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> build<wbr>Body</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagAbstract">Abstract</span> build<wbr>Body</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">build<wbr>Body<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#buildbody">buildBody</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L67">connections/odooJsonRpcConnection.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L214">connections/odooConnection.ts:214</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Builds a JsonRpc request body</p>
+									<p>Builds a request body</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -400,49 +400,47 @@
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 							<ul>
-								<li>Json string</li>
+								<li>Json or Xml body, depends on the protocol, see <a href="../enums/odooconnectionprotocol.html">OdooConnectionProtocol</a></li>
 							</ul>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="buildheaders" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> build<wbr>Headers</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagAbstract">Abstract</span> build<wbr>Headers</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">build<wbr>Headers<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iheaders.html" class="tsd-signature-type">IHeaders</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#buildheaders">buildHeaders</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L89">connections/odooJsonRpcConnection.ts:89</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L225">connections/odooConnection.ts:225</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Builds JsonRpc request headers.</p>
+									<p>Builds the request headers, see <a href="../interfaces/iheaders.html">IHeaders</a></p>
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iheaders.html" class="tsd-signature-type">IHeaders</a></h4>
 							<ul>
-								<li>request headers, see <a href="../interfaces/iheaders.html">IHeaders</a></li>
+								<li>request headers, depends on the protocol, see <a href="../enums/odooconnectionprotocol.html">OdooConnectionProtocol</a></li>
 							</ul>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 					<a name="buildurl" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> build<wbr>Url</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">build<wbr>Url<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#buildurl">buildUrl</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L201">connections/odooConnection.ts:201</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L201">connections/odooConnection.ts:201</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -466,19 +464,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="call" class="tsd-anchor"></a>
 					<h3>call</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 						<li class="tsd-signature tsd-kind-icon">call&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iodooconnection.html">IOdooConnection</a>.<a href="../interfaces/iodooconnection.html#call">call</a></p>
-								<p>Overrides <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#call">call</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L47">connections/odooJsonRpcConnection.ts:47</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L162">connections/odooConnection.ts:162</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -511,24 +508,23 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="execute_kw" class="tsd-anchor"></a>
 					<h3>execute_<wbr>kw</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 						<li class="tsd-signature tsd-kind-icon">execute_<wbr>kw&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>service<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iodooconnection.html">IOdooConnection</a>.<a href="../interfaces/iodooconnection.html#execute_kw">execute_kw</a></p>
-								<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#execute_kw">execute_kw</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L177">connections/odooConnection.ts:177</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L177">connections/odooConnection.ts:177</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Call odoo server, but first injects authentication arguments. see <a href="odoojsonrpcconnection.html#call">call</a></p>
+									<p>Call odoo server, but first injects authentication arguments. see <a href="odooconnection.html#call">call</a></p>
 								</div>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -553,19 +549,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 					<a name="getmodel" class="tsd-anchor"></a>
 					<h3>get<wbr>Model</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Model&lt;TModel&gt;<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iodoomodel.html" class="tsd-signature-type">IOdooModel</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TModel</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iodooconnection.html">IOdooConnection</a>.<a href="../interfaces/iodooconnection.html#getmodel">getModel</a></p>
-								<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#getmodel">getModel</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L155">connections/odooConnection.ts:155</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L155">connections/odooConnection.ts:155</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -592,23 +587,22 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected">
 					<a name="parsebody" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagProtected">Protected</span> parse<wbr>Body</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected">
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagAbstract">Abstract</span> parse<wbr>Body</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected">
 						<li class="tsd-signature tsd-kind-icon">parse<wbr>Body&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>body<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TResult</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
-								<p>Overrides <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#parsebody">parseBody</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooJsonRpcConnection.ts#L102">connections/odooJsonRpcConnection.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L234">connections/odooConnection.ts:234</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Parses odoo JsonRpc api response</p>
+									<p>Parses odoo api response into an object</p>
 								</div>
 							</div>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -636,19 +630,18 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="version" class="tsd-anchor"></a>
 					<h3>version</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/iodooversion.html" class="tsd-signature-type">IOdooVersion</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/iodooconnection.html">IOdooConnection</a>.<a href="../interfaces/iodooconnection.html#version">version</a></p>
-								<p>Inherited from <a href="odooconnection.html">OdooConnection</a>.<a href="odooconnection.html#version">version</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/connections/odooConnection.ts#L125">connections/odooConnection.ts:125</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/connections/odooConnection.ts#L125">connections/odooConnection.ts:125</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -678,72 +671,72 @@
 					<li class=" tsd-kind-enum">
 						<a href="../enums/odooconnectionprotocol.html" class="tsd-kind-icon">Odoo<wbr>Connection<wbr>Protocol</a>
 					</li>
-					<li class=" tsd-kind-class">
-						<a href="odooconnection.html" class="tsd-kind-icon">Odoo<wbr>Connection</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="odoojsonrpcconnection.html" class="tsd-kind-icon">Odoo<wbr>Json<wbr>Rpc<wbr>Connection</a>
+						<a href="odooconnection.html" class="tsd-kind-icon">Odoo<wbr>Connection</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="odoojsonrpcconnection.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="odooconnection.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#db" class="tsd-kind-icon">db</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#db" class="tsd-kind-icon">db</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#httpservice" class="tsd-kind-icon">http<wbr>Service</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#httpservice" class="tsd-kind-icon">http<wbr>Service</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#password" class="tsd-kind-icon">password</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#password" class="tsd-kind-icon">password</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#protocol" class="tsd-kind-icon">protocol</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#protocol" class="tsd-kind-icon">protocol</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#uid" class="tsd-kind-icon">uid</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#uid" class="tsd-kind-icon">uid</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#usercontext" class="tsd-kind-icon">user<wbr>Context</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#usercontext" class="tsd-kind-icon">user<wbr>Context</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#username" class="tsd-kind-icon">username</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#username" class="tsd-kind-icon">username</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="odoojsonrpcconnection.html#authenticate" class="tsd-kind-icon">authenticate</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odooconnection.html#authenticate" class="tsd-kind-icon">authenticate</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#buildbody" class="tsd-kind-icon">build<wbr>Body</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#buildbody" class="tsd-kind-icon">build<wbr>Body</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#buildheaders" class="tsd-kind-icon">build<wbr>Headers</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#buildheaders" class="tsd-kind-icon">build<wbr>Headers</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#buildurl" class="tsd-kind-icon">build<wbr>Url</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="odooconnection.html#buildurl" class="tsd-kind-icon">build<wbr>Url</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite">
-								<a href="odoojsonrpcconnection.html#call" class="tsd-kind-icon">call</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="odooconnection.html#call" class="tsd-kind-icon">call</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="odoojsonrpcconnection.html#execute_kw" class="tsd-kind-icon">execute_<wbr>kw</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="odooconnection.html#execute_kw" class="tsd-kind-icon">execute_<wbr>kw</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
-								<a href="odoojsonrpcconnection.html#getmodel" class="tsd-kind-icon">get<wbr>Model</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="odooconnection.html#getmodel" class="tsd-kind-icon">get<wbr>Model</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-overwrite tsd-is-protected">
-								<a href="odoojsonrpcconnection.html#parsebody" class="tsd-kind-icon">parse<wbr>Body</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-protected">
+								<a href="odooconnection.html#parsebody" class="tsd-kind-icon">parse<wbr>Body</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-								<a href="odoojsonrpcconnection.html#version" class="tsd-kind-icon">version</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odooconnection.html#version" class="tsd-kind-icon">version</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="odoojsonrpcconnection.html" class="tsd-kind-icon">Odoo<wbr>Json<wbr>Rpc<wbr>Connection</a>
+					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
 						<a href="odoomodel.html" class="tsd-kind-icon">Odoo<wbr>Model</a>
 					</li>

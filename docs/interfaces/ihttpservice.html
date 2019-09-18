@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IOdooVersion | odoo-client-js</title>
+	<title>IHttpService | odoo-client-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="iodooversion.html">IOdooVersion</a>
+					<a href="ihttpservice.html">IHttpService</a>
 				</li>
 			</ul>
-			<h1>Interface IOdooVersion</h1>
+			<h1>Interface IHttpService</h1>
 		</div>
 	</div>
 </header>
@@ -69,7 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Odoo version information model</p>
+						<p>Interface to declare an http service, making odoo connection independent of the http service or library used.</p>
 					</div>
 				</div>
 			</section>
@@ -77,7 +77,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IOdooVersion</span>
+						<span class="target">IHttpService</span>
 					</li>
 				</ul>
 			</section>
@@ -86,78 +86,62 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Properties</h3>
+							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#protocol_version" class="tsd-kind-icon">protocol_<wbr>version</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#server_serie" class="tsd-kind-icon">server_<wbr>serie</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#server_version" class="tsd-kind-icon">server_<wbr>version</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iodooversion.html#server_version_info" class="tsd-kind-icon">server_<wbr>version_<wbr>info</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="ihttpservice.html#post" class="tsd-kind-icon">post</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="protocol_version" class="tsd-anchor"></a>
-					<h3>protocol_<wbr>version</h3>
-					<div class="tsd-signature tsd-kind-icon">protocol_<wbr>version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/auth/authModel.ts#L16">models/auth/authModel.ts:16</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Odoo Server protocol version</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="server_serie" class="tsd-anchor"></a>
-					<h3>server_<wbr>serie</h3>
-					<div class="tsd-signature tsd-kind-icon">server_<wbr>serie<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/auth/authModel.ts#L12">models/auth/authModel.ts:12</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Odoo Server series</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="server_version" class="tsd-anchor"></a>
-					<h3>server_<wbr>version</h3>
-					<div class="tsd-signature tsd-kind-icon">server_<wbr>version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/auth/authModel.ts#L8">models/auth/authModel.ts:8</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Odoo Server string version</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="server_version_info" class="tsd-anchor"></a>
-					<h3>server_<wbr>version_<wbr>info</h3>
-					<div class="tsd-signature tsd-kind-icon">server_<wbr>version_<wbr>info<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/auth/authModel.ts#L20">models/auth/authModel.ts:20</a></li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Odoo Server version details</p>
-						</div>
-					</div>
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="post" class="tsd-anchor"></a>
+					<h3>post</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">post<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, headers<span class="tsd-signature-symbol">: </span><a href="iheaders.html" class="tsd-signature-type">IHeaders</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/services/http/httpService.ts#L22">services/http/httpService.ts:22</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Function that <a href="../classes/odooconnection.html">OdooConnection</a> is going to call in order to connect with Odoo server</p>
+								</div>
+								<p>Must be a HTTP POST request.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>url: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Odoo sever url</p>
+									</div>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request body</p>
+									</div>
+								</li>
+								<li>
+									<h5>headers: <a href="iheaders.html" class="tsd-signature-type">IHeaders</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Request headers</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<ul>
+								<li>A Promise of a string or object</li>
+							</ul>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -198,9 +182,18 @@
 					<li class=" tsd-kind-interface">
 						<a href="iheaders.html" class="tsd-kind-icon">IHeaders</a>
 					</li>
-					<li class=" tsd-kind-interface">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface">
 						<a href="ihttpservice.html" class="tsd-kind-icon">IHttp<wbr>Service</a>
+						<ul>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="ihttpservice.html#post" class="tsd-kind-icon">post</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="ijsonrpcresult.html" class="tsd-kind-icon">IJson<wbr>Rpc<wbr>Result</a>
 					</li>
@@ -210,27 +203,9 @@
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="iodoomodel.html" class="tsd-kind-icon">IOdoo<wbr>Model</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface">
+					<li class=" tsd-kind-interface">
 						<a href="iodooversion.html" class="tsd-kind-icon">IOdoo<wbr>Version</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iodooversion.html#protocol_version" class="tsd-kind-icon">protocol_<wbr>version</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iodooversion.html#server_serie" class="tsd-kind-icon">server_<wbr>serie</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iodooversion.html#server_version" class="tsd-kind-icon">server_<wbr>version</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iodooversion.html#server_version_info" class="tsd-kind-icon">server_<wbr>version_<wbr>info</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
 					</li>

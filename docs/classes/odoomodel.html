@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IOdooModel | odoo-client-js</title>
+	<title>OdooModel | odoo-client-js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,33 +56,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="iodoomodel.html">IOdooModel</a>
+					<a href="odoomodel.html">OdooModel</a>
 				</li>
 			</ul>
-			<h1>Interface IOdooModel&lt;T&gt;</h1>
+			<h1>Class OdooModel&lt;T&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Odoo model interface</p>
-					</div>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
 						<h4>T</h4>
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>Model custom type</p>
-							</div>
-						</div>
 					</li>
 				</ul>
 			</section>
@@ -90,14 +78,14 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IOdooModel</span>
+						<span class="target">OdooModel</span>
 					</li>
 				</ul>
 			</section>
 			<section class="tsd-panel">
-				<h3>Implemented by</h3>
+				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><a href="../classes/odoomodel.html" class="tsd-signature-type">OdooModel</a></li>
+					<li><a href="../interfaces/iodoomodel.html" class="tsd-signature-type">IOdooModel</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -105,36 +93,159 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="odoomodel.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#connection" class="tsd-kind-icon">connection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#fields" class="tsd-kind-icon">fields</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="odoomodel.html#service" class="tsd-kind-icon">service</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="iodoomodel.html#call" class="tsd-kind-icon">call</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#create" class="tsd-kind-icon">create</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#delete" class="tsd-kind-icon">delete</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#getfields" class="tsd-kind-icon">get<wbr>Fields</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#read" class="tsd-kind-icon">read</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#search" class="tsd-kind-icon">search</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#searchcount" class="tsd-kind-icon">search<wbr>Count</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#searchread" class="tsd-kind-icon">search<wbr>Read</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#select" class="tsd-kind-icon">select</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="iodoomodel.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter"><a href="odoomodel.html#call" class="tsd-kind-icon">call</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#create" class="tsd-kind-icon">create</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#getfields" class="tsd-kind-icon">get<wbr>Fields</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#read" class="tsd-kind-icon">read</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#search" class="tsd-kind-icon">search</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#searchcount" class="tsd-kind-icon">search<wbr>Count</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#searchread" class="tsd-kind-icon">search<wbr>Read</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#select" class="tsd-kind-icon">select</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="odoomodel.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-					<a name="call" class="tsd-anchor"></a>
-					<h3>call</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">call&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Odoo<wbr>Model<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, connection<span class="tsd-signature-symbol">: </span><a href="../interfaces/iodooconnection.html" class="tsd-signature-type">IOdooConnection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="odoomodel.html" class="tsd-signature-type">OdooModel</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L98">models/odooModel.ts:98</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L117">models/odooModel.ts:117</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new Odoo model instance</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Odoo Model Name</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>connection: <a href="../interfaces/iodooconnection.html" class="tsd-signature-type">IOdooConnection</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Odoo Connection Object</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="odoomodel.html" class="tsd-signature-type">OdooModel</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="connection" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> connection</h3>
+					<div class="tsd-signature tsd-kind-icon">connection<span class="tsd-signature-symbol">:</span> <a href="../interfaces/iodooconnection.html" class="tsd-signature-type">IOdooConnection</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L113">models/odooModel.ts:113</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Connection Object, see <a href="../interfaces/iodooconnection.html">IOdooConnection</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="fields" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> fields</h3>
+					<div class="tsd-signature tsd-kind-icon">fields<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L117">models/odooModel.ts:117</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Model Fields</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L105">models/odooModel.ts:105</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Model Name</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="service" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> service</h3>
+					<div class="tsd-signature tsd-kind-icon">service<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L109">models/odooModel.ts:109</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Odoo Service Name, always &quot;object&quot;</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+					<a name="call" class="tsd-anchor"></a>
+					<h3>call</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">call&lt;TResult&gt;<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#call">call</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L222">models/odooModel.ts:222</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -152,32 +263,27 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>method: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Api method name</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Api method arguments</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TResult</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="create" class="tsd-anchor"></a>
 					<h3>create</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#create">create</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L78">models/odooModel.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L201">models/odooModel.ts:201</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -189,26 +295,24 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>object: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Record object</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="delete" class="tsd-anchor"></a>
 					<h3>delete</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">delete<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#delete">delete</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L91">models/odooModel.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L215">models/odooModel.ts:215</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -220,26 +324,24 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Records identifier</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="getfields" class="tsd-anchor"></a>
 					<h3>get<wbr>Fields</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Fields<span class="tsd-signature-symbol">(</span>attributes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ifieldsinfo.html" class="tsd-signature-type">IFieldsInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Fields<span class="tsd-signature-symbol">(</span>attributes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ifieldsinfo.html" class="tsd-signature-type">IFieldsInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#getfields">getFields</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L66">models/odooModel.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L185">models/odooModel.ts:185</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -251,26 +353,24 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> attributes: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Attributes to be returned</p>
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="ifieldsinfo.html" class="tsd-signature-type">IFieldsInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ifieldsinfo.html" class="tsd-signature-type">IFieldsInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="read" class="tsd-anchor"></a>
 					<h3>read</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#read">read</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L38">models/odooModel.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L151">models/odooModel.ts:151</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -282,32 +382,27 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Record identifier</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Fields to be returned</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="search" class="tsd-anchor"></a>
 					<h3>search</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">search<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="../globals.html#domain" class="tsd-signature-type">Domain</a>, order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#search">search</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L26">models/odooModel.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L135">models/odooModel.ts:135</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -319,44 +414,33 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>domain: <a href="../globals.html#domain" class="tsd-signature-type">Domain</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Odoo domain filter</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> order: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Order by field and direction</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> offset: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Result records offset</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> limit: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Result records limit</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="searchcount" class="tsd-anchor"></a>
 					<h3>search<wbr>Count</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">search<wbr>Count<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="../globals.html#domain" class="tsd-signature-type">Domain</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#searchcount">searchCount</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L60">models/odooModel.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L178">models/odooModel.ts:178</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -368,26 +452,24 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>domain: <a href="../globals.html#domain" class="tsd-signature-type">Domain</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Odoo domain filter</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="searchread" class="tsd-anchor"></a>
 					<h3>search<wbr>Read</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">search<wbr>Read<span class="tsd-signature-symbol">(</span>domain<span class="tsd-signature-symbol">: </span><a href="../globals.html#domain" class="tsd-signature-type">Domain</a>, fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, order<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#searchread">searchRead</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L48">models/odooModel.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L160">models/odooModel.ts:160</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -399,81 +481,65 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>domain: <a href="../globals.html#domain" class="tsd-signature-type">Domain</a></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Odoo domain filter</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Fields to be returned</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> order: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Order by field and direction</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> offset: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Result records offset</p>
-									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> limit: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Result records limit</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="select" class="tsd-anchor"></a>
 					<h3>select</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">select<span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">select<span class="tsd-signature-symbol">(</span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#select">select</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L72">models/odooModel.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L194">models/odooModel.ts:194</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p> Creates a query builder from current model, see <a href="iquerybuilder.html">IQueryBuilder</a></p>
+									<p> Creates a query builder from current model, see <a href="../interfaces/iquerybuilder.html">IQueryBuilder</a></p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Fields to be returned</p>
-									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/iquerybuilder.html" class="tsd-signature-type">IQueryBuilder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="update" class="tsd-anchor"></a>
 					<h3>update</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/iodoomodel.html">IOdooModel</a>.<a href="../interfaces/iodoomodel.html#update">update</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/7bf2769/src/models/odooModel.ts#L85">models/odooModel.ts:85</a></li>
+									<li>Defined in <a href="https://github.com/reneivanxd/odoo-client-js/blob/d3b7b55/src/models/odooModel.ts#L208">models/odooModel.ts:208</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -485,15 +551,9 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>id: <span class="tsd-signature-type">number</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Records identifier</p>
-									</div>
 								</li>
 								<li>
 									<h5>object: <span class="tsd-signature-type">T</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Record object</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -516,88 +576,103 @@
 						<a href="../enums/odooconnectionprotocol.html" class="tsd-kind-icon">Odoo<wbr>Connection<wbr>Protocol</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/odooconnection.html" class="tsd-kind-icon">Odoo<wbr>Connection</a>
+						<a href="odooconnection.html" class="tsd-kind-icon">Odoo<wbr>Connection</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="../classes/odoojsonrpcconnection.html" class="tsd-kind-icon">Odoo<wbr>Json<wbr>Rpc<wbr>Connection</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="../classes/odoomodel.html" class="tsd-kind-icon">Odoo<wbr>Model</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="../classes/odooxmlrpcconnection.html" class="tsd-kind-icon">Odoo<wbr>Xml<wbr>Rpc<wbr>Connection</a>
-					</li>
-					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="../classes/querybuilder.html" class="tsd-kind-icon">Query<wbr>Builder</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="iauthresponse.html" class="tsd-kind-icon">IAuth<wbr>Response</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="ifieldsinfo.html" class="tsd-kind-icon">IFields<wbr>Info</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="iheaders.html" class="tsd-kind-icon">IHeaders</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="ihttpservice.html" class="tsd-kind-icon">IHttp<wbr>Service</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="ijsonrpcresult.html" class="tsd-kind-icon">IJson<wbr>Rpc<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="iodooconnection.html" class="tsd-kind-icon">IOdoo<wbr>Connection</a>
+						<a href="odoojsonrpcconnection.html" class="tsd-kind-icon">Odoo<wbr>Json<wbr>Rpc<wbr>Connection</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-has-type-parameter">
-						<a href="iodoomodel.html" class="tsd-kind-icon">IOdoo<wbr>Model</a>
+					<li class="current tsd-kind-class tsd-has-type-parameter">
+						<a href="odoomodel.html" class="tsd-kind-icon">Odoo<wbr>Model</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-								<a href="iodoomodel.html#call" class="tsd-kind-icon">call</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="odoomodel.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#create" class="tsd-kind-icon">create</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odoomodel.html#connection" class="tsd-kind-icon">connection</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#delete" class="tsd-kind-icon">delete</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odoomodel.html#fields" class="tsd-kind-icon">fields</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#getfields" class="tsd-kind-icon">get<wbr>Fields</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odoomodel.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#read" class="tsd-kind-icon">read</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="odoomodel.html#service" class="tsd-kind-icon">service</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#search" class="tsd-kind-icon">search</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
+								<a href="odoomodel.html#call" class="tsd-kind-icon">call</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#searchcount" class="tsd-kind-icon">search<wbr>Count</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#create" class="tsd-kind-icon">create</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#searchread" class="tsd-kind-icon">search<wbr>Read</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#select" class="tsd-kind-icon">select</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#getfields" class="tsd-kind-icon">get<wbr>Fields</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="iodoomodel.html#update" class="tsd-kind-icon">update</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#read" class="tsd-kind-icon">read</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#search" class="tsd-kind-icon">search</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#searchcount" class="tsd-kind-icon">search<wbr>Count</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#searchread" class="tsd-kind-icon">search<wbr>Read</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#select" class="tsd-kind-icon">select</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="odoomodel.html#update" class="tsd-kind-icon">update</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="odooxmlrpcconnection.html" class="tsd-kind-icon">Odoo<wbr>Xml<wbr>Rpc<wbr>Connection</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="querybuilder.html" class="tsd-kind-icon">Query<wbr>Builder</a>
+					</li>
 					<li class=" tsd-kind-interface">
-						<a href="iodooversion.html" class="tsd-kind-icon">IOdoo<wbr>Version</a>
+						<a href="../interfaces/iauthresponse.html" class="tsd-kind-icon">IAuth<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ifieldsinfo.html" class="tsd-kind-icon">IFields<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iheaders.html" class="tsd-kind-icon">IHeaders</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/ihttpservice.html" class="tsd-kind-icon">IHttp<wbr>Service</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
+						<a href="../interfaces/ijsonrpcresult.html" class="tsd-kind-icon">IJson<wbr>Rpc<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="iusercontext.html" class="tsd-kind-icon">IUser<wbr>Context</a>
+						<a href="../interfaces/iodooconnection.html" class="tsd-kind-icon">IOdoo<wbr>Connection</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="ixmlrpcresult.html" class="tsd-kind-icon">IXml<wbr>Rpc<wbr>Result</a>
+						<a href="../interfaces/iodoomodel.html" class="tsd-kind-icon">IOdoo<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iodooversion.html" class="tsd-kind-icon">IOdoo<wbr>Version</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/iquerybuilder.html" class="tsd-kind-icon">IQuery<wbr>Builder</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/iusercontext.html" class="tsd-kind-icon">IUser<wbr>Context</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="../interfaces/ixmlrpcresult.html" class="tsd-kind-icon">IXml<wbr>Rpc<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#domain" class="tsd-kind-icon">Domain</a>
