@@ -19,5 +19,25 @@ export interface IHttpService {
      * @param headers - Request headers
      * @returns - A Promise of a string or object
      */
-    post(url: string, data: any, headers: IHeaders): Promise<any>;
+    post<TBody = unknown, TResponse = unknown>(
+        url: string,
+        data: TBody,
+        headers: IHeaders
+    ): Promise<TResponse>;
 }
+
+/**
+ * Default implementation of [[IHttpService]]
+ */
+const httpService: IHttpService = {
+    post: async (url, data: unknown, headers) => {
+        const resp = await fetch(url, {
+            method: "POST",
+            headers: headers,
+            body: data as BodyInit | null | undefined
+        });
+        return await resp.json();
+    }
+};
+
+export default httpService;

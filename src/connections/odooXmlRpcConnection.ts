@@ -1,4 +1,7 @@
-import { IHeaders, IHttpService } from "../services/http/httpService";
+import defaultHttpService, {
+    IHeaders,
+    IHttpService
+} from "../services/http/httpService";
 import { OdooConnection } from "./odooConnection";
 import { OdooConnectionProtocol } from "./odooConnectionProtocol";
 
@@ -27,7 +30,7 @@ export class OdooXmlRpcConnection extends OdooConnection {
         db: string,
         username: string,
         password: string,
-        httpService: IHttpService
+        httpService: IHttpService = defaultHttpService
     ) {
         super(
             baseUrl,

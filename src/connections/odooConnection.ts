@@ -231,5 +231,5 @@ export abstract class OdooConnection implements IOdooConnection {
      * @param body - Response body
      * @returns - Parsed object
      */
-    protected abstract parseBody<TResult>(body: any): TResult;
+    protected abstract parseBody<TResult>(body: unknown): TResult;
 }

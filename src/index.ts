@@ -2,7 +2,7 @@ import { IOdooConnection } from "./connections/odooConnection";
 import { OdooConnectionProtocol } from "./connections/odooConnectionProtocol";
 import { OdooJsonRpcConnection } from "./connections/odooJsonRpcConnection";
 import { OdooXmlRpcConnection } from "./connections/odooXmlRpcConnection";
-import { IHttpService } from "./services/http/httpService";
+import defaultHttpService,{ IHttpService } from "./services/http/httpService";
 
 /**
  * A function to create a new [[OdooConnection]] instance.
@@ -20,7 +20,7 @@ export function createConnection(
     db: string,
     username: string,
     password: string,
-    httpService: IHttpService,
+    httpService: IHttpService = defaultHttpService,
     protocol: OdooConnectionProtocol = OdooConnectionProtocol.JSON_RPC
 ): IOdooConnection {
     if (protocol === OdooConnectionProtocol.JSON_RPC) {
