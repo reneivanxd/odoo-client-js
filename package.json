@@ -1,5 +1,5 @@
 {
-    "name": "odoo-client-js",
+    "name": "@reneivanxd/odoo-client-js",
     "version": "1.0.0",
     "description": "A javascript odoo jsonrpc client",
     "main": "./lib/index.js",
