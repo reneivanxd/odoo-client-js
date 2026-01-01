@@ -15,8 +15,7 @@
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "lint": "tslint -p tsconfig.json",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "docs": "typedoc --options typedoc.json",
-        "prepublishOnly": "npm run build"
+        "docs": "typedoc --options typedoc.json"
     },
     "repository": {
         "type": "git",
